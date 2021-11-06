@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  - results = [{plane: 'British-airways', speed: 10, capacity: 3000}, {plane: 'vistara', speed: 300, capacity: 280}, {plane: 'Emirates', speed: 300, capacity: 280} ]
+  div(class="container-fluid")
+      each item, index in results
+        div(class="row")
+          div(class="col-sm-2", onclick=`buy(${index})`)  #{item.plane}
+          div(class="col-sm-2", onclick=`buy(${index})`)  #{item.speed}
+          div(class="col-sm-2", onclick=`buy(${index})`)  #{item.capacity}
+  script. 
+    function buy(index) {
+      alert(`Purchased item ${index + 1}` )
+    }
