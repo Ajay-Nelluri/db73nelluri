@@ -11,7 +11,7 @@ const resoureRouter = require('./routes/resource')
 const addModRouter = require('./routes/addmods');
 const selectorRouter = require('./routes/selector');
 const Costume = require("./models/costume");
-const boilingstarRouter = require("./routes/boilingstar");
+const dcComicsRouter = require("./routes/boilingstar");
 var Account = require('./models/account'); 
 
 var passport = require('passport'); 
