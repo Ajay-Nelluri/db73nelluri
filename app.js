@@ -6,12 +6,11 @@ var logger = require('morgan');
 const mongoose = require("mongoose");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const carRouter = require('./routes/car')
 const resoureRouter = require('./routes/resource')
 const addModRouter = require('./routes/addmods');
 const selectorRouter = require('./routes/selector');
 const Costume = require("./models/costume");
-const dcComicsRouter = require("./routes/boilingstar");
+const boilingstarRouter = require("./routes/boilingstar");
 var Account = require('./models/account'); 
 
 var passport = require('passport'); 
@@ -48,9 +47,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/resource', resoureRouter);
-app.use('/dc-comics', dcComicsRouter);
+app.use('/boilingstar', boilingstarRouter);
 app.use('/users', usersRouter);
-app.use('/car', carRouter);
 app.use('/addmods', addModRouter);
 app.use('/selector', selectorRouter);
 // catch 404 and forward to error handler
